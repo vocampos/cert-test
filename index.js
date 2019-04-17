@@ -1,5 +1,5 @@
 var forge = require('node-forge');
-const fs = require('fs');
+var fs = require('fs');
 
 function savePrivateKey(privateKey) {
     fs.writeFileSync("./certs/private_key.cert", privateKey);
@@ -57,8 +57,8 @@ var pem_prKey = pki.privateKeyToPem(keys.privateKey);
 savePrivateKey(pem_prKey);
 
 //decrypt text
-let pKey = forge.pki.privateKeyFromPem(pem_prKey);
-let plain = pKey.decrypt(forge.util.decode64(encryptText));
+var pKey = forge.pki.privateKeyFromPem(pem_prKey);
+var plain = pKey.decrypt(forge.util.decode64(encryptText));
 
 console.log("\ndecrypt text:", plain);
 console.log("\ndecrypt OK?   ", plain === TEXT_TO_ENCRYPT);
