@@ -1,0 +1,14 @@
+{
+  "name": "com.certtest",
+  "version": "1.0.0",
+  "description": "Example project using node and certificates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valbert Campos",
+  "license": "ISC",
+  "dependencies": {
+    "node-forge": "^0.8.2"
+  }
+}
